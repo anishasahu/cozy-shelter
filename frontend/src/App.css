@@ -1,0 +1,151 @@
+/* Layout */
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center; /* centers all text inside container */
+  font-family: "Poppins", system-ui, sans-serif; /* nicer font */
+  box-sizing: border-box; /* includes padding in width calculation */
+}
+
+/* Ensure body centers the container */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f8f9fa; /* optional background */
+}
+
+/* Wrapper to contain everything */
+.main-wrapper {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Header */
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #2c2c54;
+}
+header p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+/* Pink stats bar */
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+  color: #fff;
+  padding: 0.8rem 1rem;
+  margin: 1rem auto 2rem auto;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  width: fit-content; /* prevents it from stretching full width */
+}
+
+/* Intake form */
+.intake-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  max-width: 500px; /* limit form width */
+  margin-left: auto;
+  margin-right: auto;
+}
+.intake-form input {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.intake-form button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  background-color: #ff69b4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.intake-form button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Table styling */
+.sock-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem auto 0 auto; /* center the table */
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.sock-table th,
+.sock-table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.sock-table th {
+  background-color: #2c2c54;
+  color: #fff;
+  font-size: 1rem;
+}
+.sock-table tr:hover {
+  background-color: #fdf2f6;
+}
+
+/* Adopt button inside table */
+.sock-table button {
+  padding: 0.4rem 0.8rem;
+  background-color: #ff69b4;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.sock-table button:hover {
+  background-color: #ff4fa4;
+}
+
+/* Status badges */
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+}
+.badge.available {
+  background-color: #28a745; /* green */
+}
+.badge.adopted {
+  background-color: #6c757d; /* gray */
+}
+
+/* Empty state text */
+.empty {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
